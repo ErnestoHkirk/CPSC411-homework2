@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
 
                 // Step 2: Check if converted data exists
                 if(convertedClaimData.isEmpty() || convertedDateData.isEmpty()){
-                    Log.d("Status Message", "Fields Empty, Try again")
+                    Log.d("Status Message", "One or more fields empty.")
                 }
                 else {
                     // Step 3: Send data from boxClaimTitle and BoxDate to claim service

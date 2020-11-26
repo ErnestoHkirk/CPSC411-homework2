@@ -32,6 +32,7 @@ class ClaimService (val ctx : MainActivity){
     }
 
     fun addClaim(pObj : Claim) {
+        Log.d("Status Message", "Adding Claim to Database")
         val client = AsyncHttpClient()
         val requestUrl = "http://192.168.56.1:8010/ClaimService/add"
 
