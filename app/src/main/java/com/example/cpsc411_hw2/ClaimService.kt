@@ -17,6 +17,7 @@ class ClaimService (val ctx : MainActivity){
         ) {
             if (responseBody != null) {
                 val respStr = String(responseBody)
+                Log.d("Status Message", "Successfully utilized Async Http Client API")
                 Log.d("Claim Service", "The add Claim Service response : ${respStr}")
             }
         }
