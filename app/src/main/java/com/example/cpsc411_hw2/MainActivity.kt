@@ -58,7 +58,7 @@ class MainActivity : AppCompatActivity() {
                     ClaimService(this).addClaim(Claim(convertedClaimData, convertedDateData))
                 }
 
-                // Step 3: Clear text view fields
+                // Step 4: Clear text view fields
                 boxClaimTitle.text.clear()
                 boxDate.text.clear()
             }
