@@ -1,6 +1,7 @@
 package com.example.cpsc411_hw2
 
 import android.util.Log
+import android.widget.TextView
 import com.google.gson.Gson
 import com.loopj.android.http.AsyncHttpClient
 import com.loopj.android.http.AsyncHttpResponseHandler
@@ -28,7 +29,7 @@ class ClaimService (val ctx : MainActivity){
             responseBody: ByteArray?,
             error: Throwable?
         ) {
-            TODO("Not yet implemented")
+            Log.d("Status Message", "Error in adding claim to database")
         }
     }
 

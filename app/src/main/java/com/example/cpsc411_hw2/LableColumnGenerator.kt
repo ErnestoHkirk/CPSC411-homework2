@@ -28,13 +28,13 @@ class LableColumnGenerator (val ctx : Context) {
         var lbl = TextView(ctx)
         lbl.text = "Claim Title"
         lbl.gravity = Gravity.CENTER
-        lbl.setBackgroundColor(Color.YELLOW)
+        lbl.setBackgroundColor(Color.rgb(204,241,255))
         layoutObj.addView(lbl, lbParams)
 
         lbl = TextView(ctx)
         lbl.text = "Date"
         lbl.gravity = Gravity.CENTER
-        lbl.setBackgroundColor(Color.YELLOW)
+        lbl.setBackgroundColor(Color.rgb(204,241,255))
         layoutObj.addView(lbl, lbParams)
 
         //lbl = TextView(ctx)

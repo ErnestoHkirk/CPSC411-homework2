@@ -1,10 +1,14 @@
 package com.example.cpsc411_hw2
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.Gravity
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
+import org.w3c.dom.Text
 
 class MainActivity : AppCompatActivity() {
     lateinit var cList : MutableList<Claim>
@@ -38,6 +42,7 @@ class MainActivity : AppCompatActivity() {
             val bView : Button = findViewById(R.id.add_btn)
             val boxClaimTitle = findViewById<EditText>(R.id.claim_title)
             val boxDate = findViewById<EditText>(R.id.date)
+            var statusMessage : TextView = findViewById(R.id.status)
 
             bView.setOnClickListener{
                 Log.d("Claim", boxClaimTitle.text.toString())
@@ -51,11 +56,13 @@ class MainActivity : AppCompatActivity() {
                 // Step 2: Check if converted data exists
                 if(convertedClaimData.isEmpty() || convertedDateData.isEmpty()){
                     Log.d("Status Message", "One or more fields empty.")
+                    statusMessage.text = "One or more fields empty. \n Please Try again.";
                 }
                 else {
                     // Step 3: Send data from boxClaimTitle and BoxDate to claim service
                     Log.d("Status Message", "Sending data to database")
                     ClaimService(this).addClaim(Claim(convertedClaimData, convertedDateData))
+                    statusMessage.text = "Claim " + convertedClaimData + "\n was successfully created.";
                 }
 
                 // Step 4: Clear text view fields
